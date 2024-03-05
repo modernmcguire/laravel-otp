@@ -2,10 +2,8 @@
 
 namespace ModernMcGuire\LaravelOtp\Listeners;
 
-use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Redirect;
 
 class RedirectForOtpVerification

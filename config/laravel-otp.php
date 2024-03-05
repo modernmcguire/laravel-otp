@@ -7,7 +7,6 @@ return [
      * The driver to use for sending the OTP
      * Supported: "email"
      * Default: "email"
-
      */
     'default_driver' => env('OTP_DRIVER', 'email'),
 

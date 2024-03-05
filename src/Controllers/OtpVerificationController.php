@@ -2,14 +2,13 @@
 
 namespace ModernMcGuire\LaravelOtp\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Cookie;
-use Symfony\Component\HttpFoundation\Cookie as HttpFoundationCookie;
 
 class OtpVerificationController extends Controller
 {

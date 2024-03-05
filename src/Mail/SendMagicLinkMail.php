@@ -3,7 +3,6 @@
 namespace ModernMcGuire\LaravelOtp\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -18,7 +17,8 @@ class SendMagicLinkMail extends Mailable
      */
     public function __construct(
         public string $url
-    ) {}
+    ) {
+    }
 
     /**
      * Get the message envelope.
@@ -26,7 +26,7 @@ class SendMagicLinkMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: config('app.name') . ' Login',
+            subject: config('app.name').' Login',
         );
     }
 

@@ -2,10 +2,9 @@
 
 namespace ModernMcGuire\LaravelOtp;
 
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Contracts\Auth\Authenticatable;
-use ModernMcGuire\LaravelOtp\Drivers\EmailDriver;
 use ModernMcGuire\LaravelOtp\Drivers\DriverContract;
+use ModernMcGuire\LaravelOtp\Drivers\EmailDriver;
 use ModernMcGuire\LaravelOtp\Drivers\QrDriver;
 use ModernMcGuire\LaravelOtp\Drivers\SmsDriver;
 
@@ -18,17 +17,17 @@ class LaravelOtp
     }
 
     /**
-     * @param string $driver
+     * @param  string  $driver
+     *
      * @throws Exception
-     * @return DriverContract
      */
     public function driver($driver = null): DriverContract
     {
         $driver = $driver ?: $this->getDefaultDriver();
 
-        $methodName = 'create' . ucfirst($driver) . 'Driver';
+        $methodName = 'create'.ucfirst($driver).'Driver';
 
-        if (!method_exists($this, $methodName)) {
+        if (! method_exists($this, $methodName)) {
             throw new \InvalidArgumentException("Driver [$driver] not supported.");
         }
 

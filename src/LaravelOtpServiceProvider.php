@@ -2,12 +2,12 @@
 
 namespace ModernMcGuire\LaravelOtp;
 
+use App\Http\Middleware\EncryptCookies;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Validated;
-use App\Http\Middleware\EncryptCookies;
+use ModernMcGuire\LaravelOtp\Listeners\RedirectForOtpVerification;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ModernMcGuire\LaravelOtp\Listeners\RedirectForOtpVerification;
 
 class LaravelOtpServiceProvider extends PackageServiceProvider
 {
@@ -36,6 +36,7 @@ class LaravelOtpServiceProvider extends PackageServiceProvider
         // Ignore encryption for the otp_user_id cookie
         $this->app->extend(EncryptCookies::class, function ($middleware, $app) {
             $middleware->disableFor('otp_user_id');
+
             return $middleware;
         });
     }

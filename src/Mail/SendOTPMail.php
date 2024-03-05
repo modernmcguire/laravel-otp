@@ -5,10 +5,8 @@ namespace ModernMcGuire\LaravelOtp\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Queue\SerializesModels;
 
 class SendOTPMail extends Mailable
 {
@@ -19,7 +17,8 @@ class SendOTPMail extends Mailable
      */
     public function __construct(
         public string $otp
-    ) {}
+    ) {
+    }
 
     /**
      * Get the message envelope.
@@ -27,7 +26,7 @@ class SendOTPMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: config('app.name') . ' Verification Code: ' . $this->otp,
+            subject: config('app.name').' Verification Code: '.$this->otp,
         );
     }
 

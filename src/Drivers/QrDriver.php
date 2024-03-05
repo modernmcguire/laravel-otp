@@ -2,8 +2,6 @@
 
 namespace ModernMcGuire\LaravelOtp\Drivers;
 
-use ModernMcGuire\LaravelOtp\Drivers\DriverContract;
-
 class QrDriver implements DriverContract
 {
     public function generateOtp(): string

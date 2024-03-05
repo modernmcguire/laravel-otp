@@ -3,12 +3,12 @@
 namespace ModernMcGuire\LaravelOtp\Controllers;
 
 use App\Models\User;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
-use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\URL;
 use ModernMcGuire\LaravelOtp\Mail\SendMagicLinkMail;
 
 class MagicLinkController extends Controller
