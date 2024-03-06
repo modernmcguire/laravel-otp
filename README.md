@@ -1,4 +1,4 @@
-# OTP generation through multiple drivers for Laravel
+# Driver-based 2FA for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/modernmcguire/laravel-otp.svg?style=flat-square)](https://packagist.org/packages/modernmcguire/laravel-otp)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/modernmcguire/laravel-otp/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/modernmcguire/laravel-otp/actions?query=workflow%3Arun-tests+branch%3Amain)
