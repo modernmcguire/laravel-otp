@@ -5,15 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/modernmcguire/laravel-otp/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/modernmcguire/laravel-otp/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/modernmcguire/laravel-otp.svg?style=flat-square)](https://packagist.org/packages/modernmcguire/laravel-otp)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-otp.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-otp)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+Add 2FA support to your Laravel Application!
 
 ## Installation
 
@@ -36,7 +28,7 @@ You can publish the config file with:
 php artisan vendor:publish --tag="laravel-otp-config"
 ```
 
-Optionally, you can publish the views using
+Optionally, you can publish the login and email using
 
 ```bash
 php artisan vendor:publish --tag="laravel-otp-views"
@@ -44,13 +36,13 @@ php artisan vendor:publish --tag="laravel-otp-views"
 
 ## Config
 
-The package has multiple drivers to choose from. You can set the driver in the config file or in your env.
+The package has multiple drivers to choose from. You can set the driver in the config file or your env.
 
 ```php
 'default_driver' => env('OTP_DRIVER', 'email'),
 ```
 
-> Note: Currently the only one that is setup properly is the email driver.
+> Note: Currently the only one that is setup is the email driver.
 
 ## Usage
 
@@ -63,12 +55,12 @@ You will be redirected to a page to enter your OTP code.
 
 ## Database
 
-New database fields will be added to your users table.
+New database fields will be added to your `users` table.
 
 
 | Field                 | Description                            |
 |-----------------------|----------------------------------------|
-| two_factor_enabled    | Whether two factor authentication is enabled |
+| two_factor_enabled    | Whether two-factor authentication is enabled |
 | otp_secret            | The OTP code to match against           |
 | otp_secret_expires_at | The time the OTP code expires (default: 5 minutes) |
 
