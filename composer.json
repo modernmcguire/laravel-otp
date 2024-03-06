@@ -1,10 +1,14 @@
 {
     "name": "modernmcguire/laravel-otp",
-    "description": "OTP generation through multiple drivers for Laravel",
+    "description": "Add 2FA support to your Laravel Application",
     "keywords": [
         "Modern McGuire",
         "laravel",
-        "laravel-otp"
+        "laravel-otp",
+        "authentication",
+        "two factor authentication",
+        "magic links",
+        "email"
     ],
     "homepage": "https://github.com/modernmcguire/laravel-otp",
     "license": "MIT",
