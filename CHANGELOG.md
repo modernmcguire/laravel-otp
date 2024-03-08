@@ -2,6 +2,10 @@
 
 All notable changes to `drawbridge` will be documented in this file.
 
+## 1.0.1 - 2024-03-08
+
+**Full Changelog**: https://github.com/modernmcguire/drawbridge/compare/1.0.0...1.0.1
+
 ## 1.0.0 - 2024-03-08
 
 **Full Changelog**: https://github.com/modernmcguire/drawbridge/compare/0.1.2...1.0.0
