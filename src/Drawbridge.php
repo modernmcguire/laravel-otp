@@ -1,19 +1,19 @@
 <?php
 
-namespace ModernMcGuire\LaravelOtp;
+namespace ModernMcGuire\Drawbridge;
 
 use Illuminate\Contracts\Auth\Authenticatable;
-use ModernMcGuire\LaravelOtp\Drivers\DriverContract;
-use ModernMcGuire\LaravelOtp\Drivers\EmailDriver;
-use ModernMcGuire\LaravelOtp\Drivers\QrDriver;
-use ModernMcGuire\LaravelOtp\Drivers\SmsDriver;
+use ModernMcGuire\Drawbridge\Drivers\DriverContract;
+use ModernMcGuire\Drawbridge\Drivers\EmailDriver;
+use ModernMcGuire\Drawbridge\Drivers\QrDriver;
+use ModernMcGuire\Drawbridge\Drivers\SmsDriver;
 
-class LaravelOtp
+class Drawbridge
 {
     public function __construct($app)
     {
         $this->app = $app;
-        $this->config = $app['config']['laravel-otp'];
+        $this->config = $app['config']['drawbridge'];
     }
 
     /**
@@ -63,7 +63,7 @@ class LaravelOtp
 
         // save to the user
         $user->otp_secret = encrypt($otp);
-        $user->otp_secret_expires_at = now()->addMinutes(config('laravel-otp.otp_expiry'));
+        $user->otp_secret_expires_at = now()->addMinutes(config('drawbridge.otp_expiry'));
         $user->save();
     }
 }

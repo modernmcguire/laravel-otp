@@ -1,16 +1,16 @@
 {
-    "name": "modernmcguire/laravel-otp",
+    "name": "modernmcguire/drawbridge",
     "description": "Add 2FA support to your Laravel Application",
     "keywords": [
         "Modern McGuire",
         "laravel",
-        "laravel-otp",
+        "drawbridge",
         "authentication",
         "two factor authentication",
         "magic links",
         "email"
     ],
-    "homepage": "https://github.com/modernmcguire/laravel-otp",
+    "homepage": "https://github.com/modernmcguire/drawbridge",
     "license": "MIT",
     "authors": [
         {
@@ -38,19 +38,19 @@
     },
     "autoload": {
         "psr-4": {
-            "ModernMcGuire\\LaravelOtp\\": "src/",
-            "ModernMcGuire\\LaravelOtp\\Database\\Factories\\": "database/factories/"
+            "ModernMcGuire\\Drawbridge\\": "src/",
+            "ModernMcGuire\\Drawbridge\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ModernMcGuire\\LaravelOtp\\Tests\\": "tests/",
+            "ModernMcGuire\\Drawbridge\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-laravel-otp --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-drawbridge --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -76,10 +76,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ModernMcGuire\\LaravelOtp\\LaravelOtpServiceProvider"
+                "ModernMcGuire\\Drawbridge\\DrawbridgeServiceProvider"
             ],
             "aliases": {
-                "LaravelOtp": "ModernMcGuire\\LaravelOtp\\Facades\\LaravelOtp"
+                "Drawbridge": "ModernMcGuire\\Drawbridge\\Facades\\Drawbridge"
             }
         }
     },

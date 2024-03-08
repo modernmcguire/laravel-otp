@@ -1,9 +1,9 @@
 <?php
 
-namespace ModernMcGuire\LaravelOtp\Tests;
+namespace ModernMcGuire\Drawbridge\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use ModernMcGuire\LaravelOtp\LaravelOtpServiceProvider;
+use ModernMcGuire\Drawbridge\DrawbridgeServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'ModernMcGuire\\LaravelOtp\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'ModernMcGuire\\Drawbridge\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            LaravelOtpServiceProvider::class,
+            DrawbridgeServiceProvider::class,
         ];
     }
 
@@ -29,7 +29,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
 
         /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-otp_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_drawbridge_table.php.stub';
         $migration->up();
         */
     }

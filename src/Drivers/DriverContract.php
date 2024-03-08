@@ -1,6 +1,6 @@
 <?php
 
-namespace ModernMcGuire\LaravelOtp\Drivers;
+namespace ModernMcGuire\Drawbridge\Drivers;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 

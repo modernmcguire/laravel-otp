@@ -1,6 +1,6 @@
 <?php
 
-namespace ModernMcGuire\LaravelOtp\Traits;
+namespace ModernMcGuire\Drawbridge\Traits;
 
 trait HandlesOTP
 {
@@ -16,11 +16,11 @@ trait HandlesOTP
 
     public function sendOTP(): void
     {
-        app('laravel-otp.manager')->generateAndSendOtp($this);
+        app('drawbridge.manager')->generateAndSendOtp($this);
     }
 
     public function validateOTP($otp): bool
     {
-        return app('laravel-otp.manager')->validateOtp($this, $otp);
+        return app('drawbridge.manager')->validateOtp($this, $otp);
     }
 }

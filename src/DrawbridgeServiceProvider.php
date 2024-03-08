@@ -1,15 +1,16 @@
 <?php
 
-namespace ModernMcGuire\LaravelOtp;
+namespace ModernMcGuire\Drawbridge;
 
-use App\Http\Middleware\EncryptCookies;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Validated;
-use ModernMcGuire\LaravelOtp\Listeners\RedirectForOtpVerification;
+use App\Http\Middleware\EncryptCookies;
 use Spatie\LaravelPackageTools\Package;
+use ModernMcGuire\Drawbridge\Drawbridge;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use ModernMcGuire\Drawbridge\Listeners\RedirectForOtpVerification;
 
-class LaravelOtpServiceProvider extends PackageServiceProvider
+class DrawbridgeServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -19,15 +20,15 @@ class LaravelOtpServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-otp')
-            ->hasConfigFile('laravel-otp')
-            ->hasViews('laravel-otp')
+            ->name('drawbridge')
+            ->hasConfigFile('drawbridge')
+            ->hasViews('drawbridge')
             ->hasMigration('add_otp_fields')
-            ->hasRoute('laravel-otp');
+            ->hasRoute('drawbridge');
 
         // Register the manager
-        $this->app->singleton('laravel-otp.manager', function ($app) {
-            return new LaravelOtp($app);
+        $this->app->singleton('drawbridge.manager', function ($app) {
+            return new Drawbridge($app);
         });
 
         // Hook into the login flow to check if the user needs OTP verification

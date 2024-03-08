@@ -1,10 +1,10 @@
 <?php
 
-namespace ModernMcGuire\LaravelOtp\Drivers;
+namespace ModernMcGuire\Drawbridge\Drivers;
 
-use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\Mail;
-use ModernMcGuire\LaravelOtp\Mail\SendOTPMail;
+use Illuminate\Contracts\Auth\Authenticatable;
+use ModernMcGuire\Drawbridge\Mail\SendOTPMail;
 
 class EmailDriver implements DriverContract
 {
@@ -18,7 +18,7 @@ class EmailDriver implements DriverContract
 
     public function sendOtp(Authenticatable $user, string $otp): bool
     {
-        $mailable = config('laravel-otp.drivers.email.mailable_class', SendOTPMail::class);
+        $mailable = config('drawbridge.drivers.email.mailable_class', SendOTPMail::class);
 
         Mail::to($user->getEmailForOtp())->send(new $mailable($otp));
 

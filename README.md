@@ -1,9 +1,9 @@
 # Driver-based 2FA for Laravel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/modernmcguire/laravel-otp.svg?style=flat-square)](https://packagist.org/packages/modernmcguire/laravel-otp)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/modernmcguire/laravel-otp/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/modernmcguire/laravel-otp/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/modernmcguire/laravel-otp/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/modernmcguire/laravel-otp/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/modernmcguire/laravel-otp.svg?style=flat-square)](https://packagist.org/packages/modernmcguire/laravel-otp)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/modernmcguire/drawbridge.svg?style=flat-square)](https://packagist.org/packages/modernmcguire/drawbridge)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/modernmcguire/drawbridge/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/modernmcguire/drawbridge/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/modernmcguire/drawbridge/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/modernmcguire/drawbridge/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/modernmcguire/drawbridge.svg?style=flat-square)](https://packagist.org/packages/modernmcguire/drawbridge)
 
 Add 2FA support to your Laravel Application!
 
@@ -12,26 +12,26 @@ Add 2FA support to your Laravel Application!
 You can install the package via composer:
 
 ```bash
-composer require modernmcguire/laravel-otp
+composer require modernmcguire/drawbridge
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-otp-migrations"
+php artisan vendor:publish --tag="drawbridge-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-otp-config"
+php artisan vendor:publish --tag="drawbridge-config"
 ```
 
 Optionally, you can publish the login and email using
 
 ```bash
-php artisan vendor:publish --tag="laravel-otp-views"
+php artisan vendor:publish --tag="drawbridge-views"
 ```
 
 ## Config

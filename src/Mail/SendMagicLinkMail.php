@@ -1,6 +1,6 @@
 <?php
 
-namespace ModernMcGuire\LaravelOtp\Mail;
+namespace ModernMcGuire\Drawbridge\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
@@ -36,7 +36,7 @@ class SendMagicLinkMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'laravel-otp::send-magic-link',
+            markdown: 'drawbridge::send-magic-link',
         );
     }
 

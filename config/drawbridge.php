@@ -1,6 +1,6 @@
 <?php
 
-use ModernMcGuire\LaravelOtp\Mail\SendOTPMail;
+use ModernMcGuire\Drawbridge\Mail\SendOTPMail;
 
 return [
     /**

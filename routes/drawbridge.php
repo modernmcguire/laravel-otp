@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use ModernMcGuire\LaravelOtp\Controllers\MagicLinkController;
-use ModernMcGuire\LaravelOtp\Controllers\OtpVerificationController;
+use ModernMcGuire\Drawbridge\Controllers\MagicLinkController;
+use ModernMcGuire\Drawbridge\Controllers\OtpVerificationController;
 
 Route::middleware(['web'])->group(function () {
     Route::get('otp/verify', [OtpVerificationController::class, 'show'])->name('otp.show');

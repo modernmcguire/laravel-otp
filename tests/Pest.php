@@ -1,5 +1,5 @@
 <?php
 
-use ModernMcGuire\LaravelOtp\Tests\TestCase;
+use ModernMcGuire\Drawbridge\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

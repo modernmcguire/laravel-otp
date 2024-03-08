@@ -1,6 +1,6 @@
 <?php
 
-namespace ModernMcGuire\LaravelOtp\Drivers;
+namespace ModernMcGuire\Drawbridge\Drivers;
 
 class SmsDriver implements DriverContract
 {

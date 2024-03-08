@@ -1,6 +1,6 @@
 <?php
 
-namespace ModernMcGuire\LaravelOtp\Listeners;
+namespace ModernMcGuire\Drawbridge\Listeners;
 
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +21,7 @@ class RedirectForOtpVerification
 
             // Redirect to the OTP verification page
             Redirect::route('otp.verify')
-                ->withCookie(cookie('otp_user_id', encrypt($event->user->getKey()), config('laravel-otp.otp_expiry')))
+                ->withCookie(cookie('otp_user_id', encrypt($event->user->getKey()), config('drawbridge.otp_expiry')))
                 ->send();
         }
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace ModernMcGuire\LaravelOtp\Controllers;
+namespace ModernMcGuire\Drawbridge\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -14,7 +14,7 @@ class OtpVerificationController extends Controller
 {
     public function show()
     {
-        return view('laravel-otp::show');
+        return view('drawbridge::show');
     }
 
     public function verify(Request $request)
