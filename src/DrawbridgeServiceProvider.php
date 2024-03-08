@@ -2,13 +2,12 @@
 
 namespace ModernMcGuire\Drawbridge;
 
+use App\Http\Middleware\EncryptCookies;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Validated;
-use App\Http\Middleware\EncryptCookies;
-use Spatie\LaravelPackageTools\Package;
-use ModernMcGuire\Drawbridge\Drawbridge;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use ModernMcGuire\Drawbridge\Listeners\RedirectForOtpVerification;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class DrawbridgeServiceProvider extends PackageServiceProvider
 {

@@ -2,8 +2,8 @@
 
 namespace ModernMcGuire\Drawbridge\Drivers;
 
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Support\Facades\Mail;
 use ModernMcGuire\Drawbridge\Mail\SendOTPMail;
 
 class EmailDriver implements DriverContract
