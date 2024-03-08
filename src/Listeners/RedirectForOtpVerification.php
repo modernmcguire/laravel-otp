@@ -28,6 +28,6 @@ class RedirectForOtpVerification
 
     protected function needsOtpVerification($user): bool
     {
-        return $user->two_factor_enabled;
+        return $user->two_factor_enabled == true;
     }
 }
